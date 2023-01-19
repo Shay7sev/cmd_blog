@@ -2,7 +2,7 @@
     "name": "cmd_blog",
     "author": "Shay",
     "description": "A starter theme for Astro.",
-    "version": "0.0.9",
+    "version": "0.0.1",
     "scripts": {
         "dev": "astro dev",
         "check": "astro check && tsc --noEmit",
@@ -18,7 +18,7 @@
         "@astrojs/rss": "^2.0.0",
         "@astrojs/sitemap": "^1.0.0",
         "astro": "^1.9.1",
-        "astro-compress": "1.1.24",
+        "astro-compress": "^1.1.27",
         "astro-icon": "^0.8.0",
         "autoprefixer": "^10.4.13",
         "sass": "^1.57.1",
@@ -28,5 +28,9 @@
     },
     "browserslist": [
         "defaults"
-    ]
+    ],
+    "dependencies": {
+        "@types/node": "^18.11.18",
+        "postcss": "^8.1.0"
+    }
 }
