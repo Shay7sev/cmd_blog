@@ -2,7 +2,7 @@ import type { ImageMetadata } from "@astrojs/image/dist/vite-plugin-astro-image"
 // @ts-ignore
 import image from "../assets/social.png";
 // @ts-ignore
-import pic from "../assets/ascii.png";
+import pic from "../assets/pokemon.png";
 
 export interface Author {
     firstname: string;
@@ -40,16 +40,16 @@ export const site: Site = {
     image: image,
     twitterCreator: "",
     author: {
-        os: "ArchLinux",
+        os: "ChromeOS",
         profilePic: pic,
-        shell: "Zsh",
-        bio: "I'm a web developer who loves making stuff and woodworking.",
-        firstname: "Sébastien",
-        lastname: "Gordano",
+        shell: "Bash",
+        bio: "I'm a robot.",
+        firstname: "Shay",
+        lastname: "7sev",
         socials: [
             {
                 name: "github",
-                link: "https://github.com/onadrog",
+                link: "https://github.com/Shay7sev/cmd_blog",
             },
         ],
     },
