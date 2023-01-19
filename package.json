@@ -1,6 +1,6 @@
 {
-    "name": "cmd_theme",
-    "author": "Sébastien Gordano",
+    "name": "cmd_blog",
+    "author": "Shay",
     "description": "A starter theme for Astro.",
     "version": "0.0.9",
     "scripts": {
@@ -21,8 +21,6 @@
         "astro-compress": "1.1.24",
         "astro-icon": "^0.8.0",
         "autoprefixer": "^10.4.13",
-        "prettier": "^2.8.3",
-        "prettier-plugin-astro": "^0.7.2",
         "sass": "^1.57.1",
         "sharp": "^0.31.3",
         "simple-astro-seo": "^0.1.3",
