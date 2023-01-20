@@ -5,13 +5,20 @@ interface Props {
 
 import type { Page } from "astro";
 import type { Frontmatter } from "../../utils/types/frontmatter";
+import Pagination from "../../components/Pagination.astro";
 import Card from "../../components/Card.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import type { GetStaticPathsOptions } from "astro";
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
     const allPosts = await Astro.glob("./*.md");
-    const posts = allPosts.filter((post) => !post.frontmatter.draft);
+    const posts = allPosts
+    .sort(
+      (a, b) =>
+        new Date(b.frontmatter.pubDate).valueOf() -
+        new Date(a.frontmatter.pubDate).valueOf()
+    )
+    .filter((post) => !post.frontmatter.draft);
     return paginate(posts, { pageSize: 9 });
 }
 const { page } = Astro.props;
@@ -42,23 +49,6 @@ const desc = "liste des posts";
                 )
             )
         }
-        {
-            page.lastPage > 1 && (
-                <nav aria-label="pagination" class="nav-paginate">
-                    <ul>
-                        {page.url.prev ? (
-                            <li class="btn">
-                                <a href={page.url.prev}>Previous</a>
-                            </li>
-                        ) : null}
-                        {page.url.next ? (
-                            <li class="btn">
-                                <a href={page.url.next}>Next</a>
-                            </li>
-                        ) : null}
-                    </ul>
-                </nav>
-            )
-        }
+        <Pagination page={page}></Pagination>
     </section>
 </BaseLayout>

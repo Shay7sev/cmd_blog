@@ -1,0 +1,9 @@
+---
+import TagCard from "../../components/TagCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const desc = "Tag List";
+---
+
+<BaseLayout title="Tag" description={desc} canonicalURL={"blog"}>
+  <TagCard />
+</BaseLayout>

@@ -13,6 +13,7 @@ export interface Frontmatter {
     url: string;
     description: string;
     tags: string[];
+    draft?: Boolean;
     image?: Image;
     pubDate: string;
 }

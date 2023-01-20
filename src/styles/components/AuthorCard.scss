@@ -9,7 +9,7 @@
     font-weight: 700;
 
     &--header {
-        display: grid;
+        display: flex;
         grid-template-areas:
             "avatar spec"
             "avatar spec";
